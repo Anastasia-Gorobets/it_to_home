@@ -1,0 +1,14 @@
+.btn-naked{
+    background: none;
+    border: none;
+}
+.not-favorite{
+    color: #000;
+}
+.not-favorite:hover,.favorite{
+    color:#AA1111;
+}
+
+.favorite:hover{
+    color:#000;
+}
