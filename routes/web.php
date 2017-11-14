@@ -48,6 +48,9 @@ Route::get('user/{userId}/favorites',['as'=>'user.favorites','uses'=>'UserContro
 
 
 Route::get('error403',['as'=>'error/403','uses'=>'ErrorController@error403']);
+Route::get('about',['as'=>'about',function(){
+    return 'About page';
+}]);
 
 
 
