@@ -53,7 +53,7 @@ Route::get('about',['as'=>'about',function(){
 }]);
 
 Route::get('userprofile',['as'=>'userprofile',function(){
-    return 'Userpryfile  page my';
+    return 'RRRRR  page my';
 }]);
 
 
