@@ -62,7 +62,15 @@
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
+
                                 <ul class="dropdown-menu" role="menu">
+
+                                    @if(Auth::user()->profile_type == 'teacher')
+                                        <li><a href="">
+                                                Edit profile
+                                            </a>
+                                        <li>
+                                    @endif
                                     <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();

@@ -52,9 +52,9 @@ Route::get('about',['as'=>'about',function(){
     return 'About page';
 }]);
 
-Route::get('userprofile',['as'=>'userprofile',function(){
-    return 'TTTTT  page my';
-}]);
+
+
+
 
 
 
