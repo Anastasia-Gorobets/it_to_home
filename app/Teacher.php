@@ -16,6 +16,13 @@ class Teacher extends Model
             ->withTimestamps();
     }
 
+    //return user for this teacher
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
+
+
 
 
 }

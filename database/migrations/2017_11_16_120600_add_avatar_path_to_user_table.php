@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateNamesTable extends Migration
+class AddAvatarPathToUserTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,8 @@ class CreateNamesTable extends Migration
      */
     public function up()
     {
-        Schema::create('names', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('user_id');
-            $table->string('name');
-            $table->timestamps();
+        Schema::table('users', function (Blueprint $table) {
+            $table->string('avatar_path');
         });
     }
 
@@ -28,6 +25,8 @@ class CreateNamesTable extends Migration
      */
     public function down()
     {
-
+        Schema::table('users', function(Blueprint $table) {
+            $table->dropColumn('avatar_path')->default('images/avatar.png');
+        });
     }
 }

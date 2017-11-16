@@ -52,7 +52,9 @@ Route::get('about',['as'=>'about',function(){
     return 'About page';
 }]);
 
-
+Route::get('teacher/{id}/edit',['as'=>'teacher.edit','uses'=>'TeacherController@edit']);
+Route::post('teacher/{id}/',['as'=>'teacher.update','uses'=>'TeacherController@update']);
+Route::get('teacher/{id}/',['as'=>'teacher.show','uses'=>'TeacherController@show']);
 
 
 

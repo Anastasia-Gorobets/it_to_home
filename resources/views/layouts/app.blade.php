@@ -66,7 +66,7 @@
                                 <ul class="dropdown-menu" role="menu">
 
                                     @if(Auth::user()->profile_type == 'teacher')
-                                        <li><a href="">
+                                        <li><a href="{{ route('teacher.edit',Auth::user()->id) }}">
                                                 Edit profile
                                             </a>
                                         <li>

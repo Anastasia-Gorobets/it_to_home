@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Name;
 use App\Pupil;
 use App\Teacher;
 use App\User;
@@ -74,10 +73,6 @@ class RegisterController extends Controller
             'profile_type' => $profileType,
         ]);
 
-        Name::create([
-        'user_id'=>$user->id,
-        'name'=>$data['name']
-        ]);
 
 
         if($profileType == 'teacher'){
